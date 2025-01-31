@@ -1,0 +1,112 @@
+import turtle as t
+
+def draw_square(side_length):
+    """Ritar en kvadrat med given sidlängd."""
+    for _ in range(4):
+        t.forward(side_length)
+        t.right(90)
+
+def move_next(distance):
+    """Flyttar pennan åt höger utan att rita."""
+    t.penup()
+    t.forward(distance)
+    t.pendown()
+
+def draw_circle(steps, step_length, angle):
+    """Ritar en cirkel genom att använda steg och vinklar."""
+    for _ in range(steps):
+        t.forward(step_length)
+        t.right(angle)
+
+def draw_P():
+    t.pendown()
+    t.left(90)
+    t.forward(50)
+    t.right(90)
+    t.forward(25)
+    t.right(90)
+    t.forward(25)
+    t.right(90)
+    t.forward(25)
+    t.penup()
+    t.right(180)
+    t.forward(50)
+    t.right(90)
+    t.forward(40)
+
+def draw_Y():
+    t.pendown()
+    t.left(60)
+    t.forward(30)
+    t.right(120)
+    t.forward(30)
+    t.penup()
+    t.backward(15)
+    t.right(60)
+    t.pendown()
+    t.forward(20)
+    t.penup()
+    t.forward(20)
+
+def draw_T():
+    t.pendown()
+    t.forward(30)
+    t.backward(15)
+    t.right(90)
+    t.forward(50)
+    t.penup()
+    t.backward(50)
+    t.left(90)
+    t.forward(40)
+
+def draw_H():
+    t.pendown()
+    t.left(90)
+    t.forward(50)
+    t.penup()
+    t.backward(25)
+    t.right(90)
+    t.pendown()
+    t.forward(30)
+    t.left(90)
+    t.penup()
+    t.forward(25)
+    t.pendown()
+    t.backward(50)
+    t.penup()
+    t.forward(50)
+    t.right(90)
+    t.forward(40)
+
+def draw_O():
+    t.pendown()
+    t.circle(25)
+    t.penup()
+    t.forward(50)
+
+def draw_N():
+    t.pendown()
+    t.left(90)
+    t.forward(50)
+    t.right(150)
+    t.forward(58)
+    t.left(150)
+    t.forward(50)
+    t.penup()
+    t.left(90)
+    t.forward(40)
+
+def draw_python():
+    """Ritar ordet 'PYTHON' med turtle."""
+    t.penup()
+    t.goto(-200, 0)
+    draw_P()
+    draw_Y()
+    draw_T()
+    draw_H()
+    draw_O()
+    draw_N()
+
+t.speed(3)
+draw_python()
+t.done()
